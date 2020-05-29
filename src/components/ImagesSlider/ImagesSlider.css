@@ -1,0 +1,92 @@
+.images-slider-wrapper {
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000000;
+}
+
+.images-slider-wrapper button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #000;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  outline: none;
+  opacity: 0;
+  transition: all ease-in-out 0.5s;
+  z-index: 1;
+}
+
+.images-slider-wrapper:hover button {
+  opacity: 1;
+}
+
+.images-slider-wrapper button:disabled {
+  cursor: not-allowed;
+}
+
+.images-slider-wrapper p {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.btn-next {
+  right: 10px;
+}
+
+.btn-prev {
+  left: 10px;
+}
+
+.images-slider-img {
+  display: block;
+}
+
+.dots-wrapper {
+  position: absolute;
+  bottom: 5px;
+}
+
+.dot {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease-in-out;
+}
+
+.dot.activeDot {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.dot:hover {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (max-width: 800px) {
+  .images-slider-img {
+    max-width: 100%;
+    height: auto;
+  }
+}

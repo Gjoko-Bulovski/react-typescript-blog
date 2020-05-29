@@ -1,0 +1,39 @@
+.blog-search-form {
+  width: 800px;
+  margin: auto;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.blog-search {
+  padding: 3px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.blog-search:focus {
+  border: 1px solid rgb(66, 172, 205);
+  box-shadow: 0 0 0 2px rgba(66, 172, 205, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.blog-search-btn {
+  outline: none;
+  border: none;
+  background: none;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .blog-search-form {
+    width: 100%;
+  }
+}

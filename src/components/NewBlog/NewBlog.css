@@ -1,0 +1,130 @@
+.newBlog-form {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  border-radius: 4px;
+  width: 600px;
+  margin: auto;
+  margin-top: 20px;
+  text-align: left;
+  background: #fff;
+}
+
+.newBlog-input-group {
+  display: grid;
+}
+
+.newBlog-input-group label {
+  margin-bottom: 5px;
+}
+.newBlog-textarea {
+  width: 100%;
+  outline: none;
+  border: 1px solid #072d43;
+  padding: 10px;
+  border-radius: 3px;
+  transition: all 0.2s ease-in-out;
+}
+
+.newBlog-textarea:focus {
+  border: 1px solid rgb(66, 172, 205);
+  box-shadow: 0 0 0 2px rgba(66, 172, 205, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.newBlog-btn-submit {
+  outline: none;
+  border: 1px solid #000;
+  background: #fff;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin: auto;
+  transition: all 0.2s ease-in-out;
+}
+
+.newBlog-btn-submit:hover {
+  background: #000;
+  color: #fff;
+}
+
+.fa-trash-alt {
+  cursor: pointer;
+}
+
+.newBlog-images-wrapper {
+  width: 560px;
+  overflow-x: auto;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.newBlog-images-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.newBlog-images-content {
+  width: 150px;
+  height: 150px;
+  background-position: 50%;
+  background-size: cover;
+  flex-shrink: 0;
+  background-color: #f7fafc;
+  background-blend-mode: multiply;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+  margin-right: 20px;
+  display: flex;
+  justify-content: flex-end;
+  scroll-snap-align: start;
+}
+
+.newBlog-images-content img {
+  display: none;
+}
+
+.newBLog-btn-AddImage {
+  outline: none;
+  border: 1px solid #000;
+  color: #000;
+  background: #fff;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.newBLog-btn-AddImage:not(.isDisabled):hover {
+  background: #000;
+  color: #fff;
+}
+
+.newBLog-btn-AddImage.isDisabled {
+  pointer-events: auto;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.delete-img {
+  background: rgba(0, 0, 0, 0.5);
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  .newBlog-form {
+    width: 100%;
+  }
+  .newBlog-images-wrapper {
+    width: 100%;
+  }
+}
